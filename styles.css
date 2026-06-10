@@ -13,12 +13,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
   background-color: #0f0f13;
   color: #ffffff;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.6;
 }
 
 /* --- TARJETA PRINCIPAL --- */
@@ -26,7 +28,11 @@ body {
   width: 90%;
   max-width: 400px;
   text-align: center;
-  padding: 40px 20px;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* --- FOTO DE PERFIL --- */
@@ -36,29 +42,88 @@ body {
 
 /* --- NOMBRE --- */
 .name {
-  font-size: 28px;
-  margin-top: 16px;
+  font-size: 2rem;           
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 /* --- BIO --- */
 .bio {
-  font-size: 15px;
+  font-size: 1rem;
   color: #a0a0b0;
-  margin-top: 8px;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /* --- CONTENEDOR DE ENLACES --- */
 .links {
-  margin-top: 24px;
+  width: 100%;
+  margin-top: 0;
 }
 
 /* --- CADA ENLACE --- */
 .link {
   display: block;
-  padding: 14px;
-  margin-top: 12px;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
   border: 1px solid #2a2a38;
+  border-radius: 0.5rem;
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 500px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bio {
+    max-width: 400px;
+  }
+
+  .link {
+    margin-bottom: 1.25rem;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s ease;
+  }
+
+  .link:hover {
+    background: #1a1a24;
+    border-color: #44445a;
+    transform: scale(1.02);
+  }
+}
+
+@media (min-width: 1600px) {
+  .card {
+    max-width: 560px;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .link {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
 }
